@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Streamgraph</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/c3.css">
+    <link rel="stylesheet" type="text/css" href="./css/heatmap.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/tabs.css' rel='stylesheet' type='text/css' />
+    
+  </head>
+  <body>
+
+    <div id="Current" class="tabcontent" style="display:block;">
+      <div class="header">
+        <h5>Daily Sentiment</h5>
+      </div>
+      <div id="dailychart"></div>
+    </div>
+
+    <div id="History" class="tabcontent">
+      <div class="header">
+        <h5>History</h5>
+      </div>
+      <div id="heatmapchart"></div>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+      <div class="header">
+        <h5>Settings</h5>
+      </div>
+      <div class="buttons-wrapper">
+        <label class="switch">
+          <input id="notif-check" type="checkbox" checked>
+          <div class="slider round"></div>
+        </label>
+        <h4>Notifications</h4>
+      </div>
+    </div>
+
+    <div class="tab">
+      <button class="tablinks active" style="width:33%" id="CurrentOpen"><img class="icon" src="img/clock.png"/>&nbspDAILY</button>
+      <button class="tablinks" style="width:33%" id="HistoryOpen"><img class="icon" src="img/calendar.png"/>&nbspHISTORY</button>
+      <button class="tablinks" style="width:33%" id="SettingsOpen"><img class="icon" src="img/gear.png"/>&nbspSETTINGS</button>
+    </div>
+
+    <script src='tabs.js'></script>
+    <!-- daily chart -->
+    <script src="d3/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/c3.min.js"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="/js/dailychart.js" charset="utf-8"></script>
+    <script src="/js/heatmap.js"></script>
+    <!-- <script src='d3/d3.v4.min.js'></script> -->
+    <!-- <script src='popup_graph.js'></script> -->
+
+  </body>
+</html>
